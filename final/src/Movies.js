@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useGlobalContext } from './context';
 import { Link } from 'react-router-dom';
 const url =
@@ -14,6 +14,7 @@ const Movies = () => {
     <section className='movies'>
       {movies.map((movie) => {
         const { imdbID: id, Poster: poster, Title: title, Year: year } = movie;
+
         return (
           <Link to={`/movies/${id}`} key={id} className='movie'>
             <article>
